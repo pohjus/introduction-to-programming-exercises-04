@@ -1,34 +1,44 @@
 import static java.lang.System.out;
 
+/**
+ * Main class to demonstrate various array operations.
+ */
 public class Main {
-    public static void main(String [] args) {
-        // Exercise 01
-        int [] arr = {12,99,32};
+
+    /**
+     * Main method to run the exercises.
+     *
+     * @param args Command line arguments (not used).
+     */
+    public static void main(final String[] args) {
+
+        // Exercise 01: Print first and last elements of the array.
+        int[] arr = { 12, 99, 32 };
 
         out.println(arr[0]);
-        out.println(arr[2]);
+        out.println(arr[arr.length - 1]);
 
-        // Exercise 02
+        // Exercise 02: Print the length of the array.
         out.println("Length: " + arr.length);
 
-        // Exercise 03
-        for(int i = 0; i < 3; i++) {
-            System.out.println(i);
+        // Exercise 03: Print the index from 0 to 2.
+        for (int i = 0; i < 3; i++) {
+            out.println(i);
         }
 
-        // Exercise 04
-        for(int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+        // Exercise 04: Print all elements of the array.
+        for (int i = 0; i < arr.length; i++) {
+            out.println(arr[i]);
         }
 
-        // Exercise 05
-        for(int i = 2; i >= 0; i--) {
-            System.out.println(i);
+        // Exercise 05: Print the index from 2 to 0 in reverse.
+        for (int i = 2; i >= 0; i--) {
+            out.println(i);
         }
 
-        // Exercise 06
-        for(int i = arr.length - 1; i >= 0; i--) {
-            System.out.println(arr[i]);
+        // Exercise 06: Print all elements of the array in reverse order.
+        for (int i = arr.length - 1; i >= 0; i--) {
+            out.println(arr[i]);
         }
     }
 }

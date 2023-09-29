@@ -1,25 +1,35 @@
 import java.io.Console;
 import static java.lang.System.out;
 
-// This is a monster code, should be divided into methods.
+/**
+ * A simplified Tic-Tac-Toe game in a one-dimensional array.
+ * The board size and player moves are collected from the console.
+ *
+ * @author Jussi Pohjolainen
+ */
 public class Main {
-    public static void main(String[] args) {
+
+    /**
+     * The main method for running the Tic-Tac-Toe game.
+     *
+     * @param args Command line arguments, none are used.
+     */
+    public static void main(final String[] args) {
         Console console = System.console();
 
         // Initialize board size and validate input
-        // Uses try catch (something you will learn later... checks if non numbers are given)
         int size;
         while (true) {
             out.println("Enter board size");
             try {
                 size = Integer.parseInt(console.readLine());
-                if (size > 2) { // Minimum size to allow for a win
+                if (size > 2) {
                     break;
                 } else {
                     out.println("Size must be greater than 2.");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Invalid input, please enter an integer.");
+                out.println("Invalid input, please enter an integer.");
             }
         }
 
@@ -29,16 +39,16 @@ public class Main {
         }
 
         char currentPlayer = 'X';
-        int count = 0;
+        int count;
 
         while (true) {
-            // Display board
+            // Display the current state of the board
             for (char c : board) {
                 out.print("[" + c + "]");
             }
             out.println();
 
-            // Validate player move
+            // Validate and execute player move
             int position;
             while (true) {
                 out.println("Enter position for " + currentPlayer);
@@ -54,18 +64,13 @@ public class Main {
                 }
             }
 
+            // Update board and check for a win
             board[position] = currentPlayer;
-
-            // Check for win
             count = 0;
             for (char c : board) {
                 if (c == currentPlayer) {
                     count++;
                     if (count == 3) {
-                        for (char c1 : board) {
-                            out.print("[" + c1 + "]");
-                        }
-                        out.println();
                         out.println(currentPlayer + " wins!");
                         return;
                     }
@@ -74,7 +79,7 @@ public class Main {
                 }
             }
 
-            // Switch player
+            // Switch to the other player
             currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
         }
     }
