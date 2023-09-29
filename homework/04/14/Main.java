@@ -1,4 +1,5 @@
 import java.io.Console;
+import static java.lang.System.out;
 
 // This is a monster code, should be divided into methods.
 public class Main {
@@ -9,13 +10,13 @@ public class Main {
         // Uses try catch (something you will learn later... checks if non numbers are given)
         int size;
         while (true) {
-            System.out.println("Enter board size");
+            out.println("Enter board size");
             try {
                 size = Integer.parseInt(console.readLine());
                 if (size > 2) { // Minimum size to allow for a win
                     break;
                 } else {
-                    System.out.println("Size must be greater than 2.");
+                    out.println("Size must be greater than 2.");
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input, please enter an integer.");
@@ -33,23 +34,23 @@ public class Main {
         while (true) {
             // Display board
             for (char c : board) {
-                System.out.print("[" + c + "]");
+                out.print("[" + c + "]");
             }
-            System.out.println();
+            out.println();
 
             // Validate player move
             int position;
             while (true) {
-                System.out.println("Enter position for " + currentPlayer);
+                out.println("Enter position for " + currentPlayer);
                 try {
                     position = Integer.parseInt(console.readLine()) - 1;
                     if (position >= 0 && position < size && board[position] == ' ') {
                         break;
                     } else {
-                        System.out.println("Invalid position, try again.");
+                        out.println("Invalid position, try again.");
                     }
                 } catch (NumberFormatException e) {
-                    System.out.println("Invalid input, please enter an integer.");
+                    out.println("Invalid input, please enter an integer.");
                 }
             }
 
@@ -62,10 +63,10 @@ public class Main {
                     count++;
                     if (count == 3) {
                         for (char c1 : board) {
-                            System.out.print("[" + c1 + "]");
+                            out.print("[" + c1 + "]");
                         }
-                        System.out.println();
-                        System.out.println(currentPlayer + " wins!");
+                        out.println();
+                        out.println(currentPlayer + " wins!");
                         return;
                     }
                 } else {
