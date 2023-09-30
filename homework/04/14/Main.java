@@ -17,6 +17,8 @@ public class Main {
     public static void main(final String[] args) {
         Console console = System.console();
 
+        final int numberToBeWin = 3;
+
         // Initialize board size and validate input
         int size;
         while (true) {
@@ -54,7 +56,8 @@ public class Main {
                 out.println("Enter position for " + currentPlayer);
                 try {
                     position = Integer.parseInt(console.readLine()) - 1;
-                    if (position >= 0 && position < size && board[position] == ' ') {
+                    if (position >= 0 && position < size
+                                      && board[position] == ' ') {
                         break;
                     } else {
                         out.println("Invalid position, try again.");
@@ -70,7 +73,7 @@ public class Main {
             for (char c : board) {
                 if (c == currentPlayer) {
                     count++;
-                    if (count == 3) {
+                    if (count == numberToBeWin) {
                         out.println(currentPlayer + " wins!");
                         return;
                     }

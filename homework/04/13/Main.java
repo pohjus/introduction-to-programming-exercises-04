@@ -25,9 +25,12 @@ public class Main {
         int input = Integer.parseInt(args[0]);
 
         // Initialize array and populate with random numbers
-        int[] arr = new int[10];
+        final int amountOfRandNumbers = 10;
+        final int randMax = 100;
+
+        int[] arr = new int[amountOfRandNumbers];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int) (Math.random() * 100) + 1;
+            arr[i] = (int) (Math.random() * randMax) + 1;
         }
 
         // Search for the input number in the array

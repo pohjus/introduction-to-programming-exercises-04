@@ -17,7 +17,8 @@ public class Main {
     public static void main(final String[] args) {
 
         // Initialize an array to hold 10 integers.
-        int[] arr = new int[10];
+        final int numberOfIntegers = 10;
+        int[] arr = new int[numberOfIntegers];
 
         // Acquire a console for user input.
         Console console = System.console();
