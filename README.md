@@ -3,13 +3,13 @@
 This repository contains exercise set 04 for an Introduction to Programming course. Also some utility scripts
 are included for creating a proper directory structure quickly.
 
-## ⚠️ Disclaimer
+## Quick Start for create-dir scripts
+
+### ⚠️ Disclaimer
 
 **Use these utility scripts at your own risk. Running these could potentially harm or destroy data on your computer. I am not responsible for any damage caused.**
 
 See also similar tool by [Lassi-Ahonen](https://github.com/Lassi-Ahonen/): [java_homework_dir_gen](https://github.com/Lassi-Ahonen/java_homework_dir_gen).
-
-## Quick Start for create-dir scripts
 
 ### macOS / Linux
 
