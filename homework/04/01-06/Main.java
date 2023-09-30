@@ -3,7 +3,7 @@ import static java.lang.System.out;
 /**
  * Main class to demonstrate various array operations.
  *
- *  * @author Jussi Pohjolainen
+ * @author Jussi Pohjolainen
  */
 public class Main {
 
