@@ -21,15 +21,15 @@ See also similar tool by [Lassi-Ahonen](https://github.com/Lassi-Ahonen/): [java
    chmod +x create-dir.sh
 ```
 
-3. Run the Script: Execute the script with a numerical argument (e.g., 10) to create directories:
+3. Run the Script: Execute the script with a numerical argument (e.g., 10) to create directories and give your name also:
 
 ```bash
-   ./create-dir.sh 10
+   ./create-dir.sh 10 "Jussi Pohjolainen"
 ```
 
 Resulting Directory Structure
 
-The script will create the following directories each containing a Main.java file:
+The script will create the following directories each containing a Main.java file with basic javadoc comments:
 
 ```text
 .
@@ -40,6 +40,26 @@ The script will create the following directories each containing a Main.java fil
 ...
 └── e10
     └── Main.java
+```
+
+The `Main.java` will contain:
+
+```java
+/**
+ * Main class for exercise.
+ *
+ * @author Jussi Pohjolainen
+ */
+public class Main {
+    /**
+     * Main method - starting point for the app.
+     *
+     * @param args Command line arguments
+     */
+    public static void main(String[] args) {
+
+    }
+}
 ```
 
 ### Example
@@ -53,7 +73,7 @@ The script will create the following directories each containing a Main.java fil
 3. **Execute the Script**: Navigate to the script's directory and run:
 
 ```bash
-create-dir.bat 10
+create-dir.bat 10 "Jussi Pohjolainen"
 ```
 
 ### Example
