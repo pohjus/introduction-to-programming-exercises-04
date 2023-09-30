@@ -79,3 +79,10 @@ create-dir.bat 10 "Jussi Pohjolainen"
 ### Example
 
 ![My Image](util/images/windows.gif)
+
+## Check Style
+
+[Checkstyle](https://checkstyle.sourceforge.io) is a tool that checks if your code conforms to Oracle Code Conventions.
+
+1. **Download jar and xml-files**: Obtain all files from `util\checkstyle\` and place them in a directory of your choice
+2. **Run the jar file**: Give commmand `java -jar checkstyle-10.12.3-all.jar -c sun_checks.xml Main.java`, where `Main.java` is your code file. You can also do for example _.java or _/\*.java to check multiple files.
