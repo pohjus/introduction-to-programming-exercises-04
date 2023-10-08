@@ -32,8 +32,8 @@
 -->
 
 <module name="Checker">
-  <property name="localeCountry" value="FI"/>
-  <property name="localeLanguage" value="fi"/>
+  <property name="localeCountry" value="US"/>
+  <property name="localeLanguage" value="en"/>
   <!--
       If you set the basedir property below, then all reported file
       names will be relative to the specified directory. See
