@@ -12,6 +12,7 @@ public class Main {
      *
      * @param args Command line arguments containing the strings to shuffle.
      */
+    @SuppressWarnings("checkstyle:FinalParameters")
     public static void main(String[] args) {
         // Note: args not set to final because we change it later on.
 
