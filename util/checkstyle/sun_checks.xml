@@ -32,6 +32,8 @@
 -->
 
 <module name="Checker">
+  <property name="localeCountry" value="FI"/>
+  <property name="localeLanguage" value="fi"/>
   <!--
       If you set the basedir property below, then all reported file
       names will be relative to the specified directory. See
@@ -51,7 +53,7 @@
 
   <!-- https://checkstyle.org/filters/suppressionfilter.html -->
   <module name="SuppressionFilter">
-    <property name="file" value="suppressions.xml" />
+    <property name="file" value="/Users/pohjus/Developer/codeconvention/suppressions.xml" />
     <property name="optional" value="true"/>
   </module>
 
@@ -95,7 +97,9 @@
   <!--   <property name="fileExtensions" value="java"/> -->
   <!-- </module> -->
 
+  <module name="SuppressWarningsFilter" />
   <module name="TreeWalker">
+    <module name="SuppressWarningsHolder" />
 
     <!-- Checks for Javadoc comments.                     -->
     <!-- See https://checkstyle.org/checks/javadoc/index.html -->
